@@ -26,12 +26,13 @@
             @foreach ($posts as $post)
                 <div class="mb-4">
                     <a href="" class="font-bold">{{ $post->user->name }}</a><br>
-                    <span class="text-gray-600 text-sm">{{ $post->created_at }}</span>
+                    <span class="text-gray-600 text-sm">{{ $post->created_at->format('d/m/Y') }}</span>
                     <p class="mb-2">{{ $post->body }}</p>
                 </div>
             @endforeach
 
-                
+            {{ $posts->links() }}
+
             @else
                 <p>There are no posts</p>
             @endif
