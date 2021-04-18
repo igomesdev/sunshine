@@ -7,7 +7,7 @@
             @csrf
                 <div class="mb-4">
                     <label for="body" class="sr-only">Body</label>
-                    <textarea name="body" id="body"  cols="30" rows="4" placeholder="Post Something!" class="bg-gray-100 border-2 w-full p-4 rouded-lg @error('body') border-red-500 @enderror"></textarea>
+                    <textarea name="body" id="body" cols="30" rows="4" placeholder="Post Something!" class="bg-gray-100 border-2 w-full p-4 rouded-lg @error('body') border-red-500 @enderror"></textarea>
 
                     @error('body')
                         <div class="text-red-500 mt-2 text-sm">
@@ -23,7 +23,7 @@
 
             @if ($posts->count())
                 @foreach ($posts as $post)
-                <x-post :post="$post" />
+                 <x-post :post="$post" />
                 @endforeach
 
                 {{ $posts->links() }}
