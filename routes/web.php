@@ -9,9 +9,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [PostController::class, 'index'])->name('posts');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->name('dashboard');
