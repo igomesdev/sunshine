@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta htt-equiv="X-UA-Compatible" content="ie=edge">
         <title>SunShine Estates</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('icons/all.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body class="bg-gray-200">
     <nav class="p-6 bg-white flex justify-between mb-6">
@@ -44,6 +47,10 @@
             @endguest
         </ul>
     </nav>
-        @yield('content')    
+        @yield('content')
+
+        <div class="footer">
+            @include('layouts.footer')
+        </div> 
     </body>
 </html>
